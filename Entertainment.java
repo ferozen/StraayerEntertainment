@@ -1,8 +1,7 @@
+// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 package Entertainment;
 
 public abstract class Entertainment {
-	
-	// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 	
 private String name;
 private double annualIncome;

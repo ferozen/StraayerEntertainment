@@ -2,17 +2,22 @@
 package Entertainment;
 
 public class ChamberOrchestra extends Entertainment implements Recordable {
-	// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 	
 	private String name;
 	private String city;
 	private int numberOfSeats;
+	public static final String VIOLIN = "Violin";
+	public static final String VIOLA= "Viola";
+	public static final String CELLO = "Cello";
+	public static final String FLUTE = "Flute";
+	
+	String[] instrumentList = new String[0];
 	
 	public ChamberOrchestra(String name, String city, int numberOfSeats) {
 		this.setName(name);
 		this.city=city;
 		this.numberOfSeats = numberOfSeats;
-		
+		this.instrumentList = new String[numberOfSeats];
 	}
 
 // Interface methods	
@@ -56,6 +61,20 @@ public class ChamberOrchestra extends Entertainment implements Recordable {
 
 	public void setNumberOfSeats(int numberOfSeats) {
 		this.numberOfSeats = numberOfSeats;
+	}
+
+	public String[] getInstrumentList() {
+		return instrumentList;
+	}
+
+	public void setInstrumentList(String [] a) {
+		
+		
+		instrumentList = a;
+/*		for (int i=0; i<CDlist.size(); i++) {
+			 System.out.println(a[i]);
+		 }*/
+		
 	}
 	
 	

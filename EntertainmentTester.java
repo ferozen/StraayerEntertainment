@@ -39,7 +39,6 @@ public class EntertainmentTester {
 		
 		RockBand newband = new RockBand(name,genre);
 		
-		
 		System.out.print("Set the city your band is from: ");
 		String city = keyboard.next();
 		
@@ -65,8 +64,10 @@ public class EntertainmentTester {
 		if ( cdchoice.equals("y")) {
 		System.out.println();
 		System.out.println("Let's make a new CD! ");
-		System.out.print("What would you like to name the CD? : ");
-		String cdname = keyboard.nextLine(); 
+		// Need to figure out how to input the whole string if possible. Currently, if you put in a name like "Jagged Edge", the code only reads the "Jagged"
+		// part and just puts edge as the studio which messes up everything. Not 100% sure how to make sure we can have full names
+		System.out.print("What would you like to name the CD? : "); 
+		String cdname = keyboard.next(); 
 		System.out.print("\r");
 /*		
 		System.out.print("At which studio was this recorded? : ");
@@ -94,7 +95,7 @@ public class EntertainmentTester {
 		String choice2 = keyboard.next();
 		
 		
-		if ( choice2.equals(choice2) ) {
+		if ( choice2.equals("y") ) {
 			
 			System.out.println("Current list of CDs: ");
 			String[] cdlist = newband.getListofCDs();
@@ -107,8 +108,36 @@ public class EntertainmentTester {
 	
 		else {
 		}
+		
+		String broadcasttime = "5:30PM";
+		String broadcaststation = "Myfavoritestationever";
+		
+		newband.addBroadcast(broadcasttime, broadcaststation);
+		
+		System.out.println();
+		System.out.println("Broadcast created! ");
+		
+		System.out.print("Would you like to get the current list of Broadcasts? [y/n]: ");
+		String choice3 = keyboard.next();
+		
+		
+		if ( choice3.equals("y") ) {
+			
+			System.out.println("Current list of Broadcasts: ");
+			String[] broadcastlist = newband.getListOfBroadcasts();
+			
+			for (int i=0; i<broadcastlist.length; i++) {
+				System.out.println(broadcastlist[i]);
+			}
+				
+		}
+	
+		else {
+		}
 	}
-
+	
+		
+		
 	private static void editChamberOrchestra() {
 		ChamberOrchestra coolguys = new ChamberOrchestra("Amran's orchestra","Nice City",4);
 		

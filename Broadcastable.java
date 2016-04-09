@@ -1,3 +1,4 @@
+// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 package Entertainment;
 
 public interface Broadcastable {

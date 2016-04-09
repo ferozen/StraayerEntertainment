@@ -1,6 +1,5 @@
+// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 package Entertainment;
-
-
 
 public class CDRecording {
 	
@@ -27,7 +26,9 @@ public class CDRecording {
 		return CDinfo;
 		
 	}
-
+	
+	// Ignore below, unused code left for possible use. 
+	
 //	public void createCD(String name,String studio,String length) {
 //		
 //		List<String> CDlist = new ArrayList<String>();

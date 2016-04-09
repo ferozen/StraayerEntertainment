@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class EntertainmentTester {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		
 		Scanner keyboard = new Scanner(System.in);
 		
@@ -19,9 +19,6 @@ public class EntertainmentTester {
 		if (selection == 1) {
 			editRockband();
 		}
-		
-		
-		
 		
 	}
 
@@ -68,7 +65,7 @@ public class EntertainmentTester {
 		System.out.println();
 		System.out.println("Let's make a new CD! ");
 		System.out.print("What would you like to name the CD? : ");
-		String cdname = keyboard.next();
+		String cdname = keyboard.nextLine(); 
 		System.out.print("\r");
 /*		
 		System.out.print("At which studio was this recorded? : ");

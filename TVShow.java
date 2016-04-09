@@ -1,35 +1,34 @@
+// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 package Entertainment;
 
-public class TVShow extends Entertainment implements Broadcast{
+public class TVShow extends Entertainment implements Broadcastable {
 	// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 	
-	private String network;
 	private String genre;
+	private String station;
 	
 	
+
+	public TVShow(String name, String station) {
+		this.setName(name);
+		this.setAnnualIncome(23231);
+		this.station = station;
+	}
+
+// Interface methods
 	
-	public void scheduleBroadcast() {
+	public void addBroadcast(String time, String station) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	public TVShow(String name, double annualIncome) {
-		
-		name = "TVShow";
-		annualIncome = 1000000;
-		this.setName(name);
-		this.setAnnualIncome(annualIncome);
-	}
 	
-
-	public String getNetwork() {
-		return network;
+	public String[] getListOfBroadcasts() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public void setNetwork(String network) {
-		this.network = network;
-	}
-
+// Getters and setters
+	
 	public String getGenre() {
 		return genre;
 	}
@@ -37,18 +36,16 @@ public class TVShow extends Entertainment implements Broadcast{
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-
-	@Override
-	public void addBroadcast(String time, String station) {
-		// TODO Auto-generated method stub
-		
+	
+	public String getStation() {
+		return station;
 	}
-
-	@Override
-	public String[] getListOfBroadcasts() {
-		// TODO Auto-generated method stub
-		return null;
+	public void setStation(String station) {
+		this.station = station;
 	}
+	
+	
+
 
 	
 }

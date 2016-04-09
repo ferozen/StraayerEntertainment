@@ -1,20 +1,31 @@
-
+// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 package Entertainment;
 
-public class Movie extends Entertainment implements Broadcast {
+public class Movie extends Entertainment implements Broadcastable {
+	// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
 	
 	private String director;
 	private String studio;
 	
-	// EntertainmentProject: Amran Feroz, Gong Zhenmu, Michelle Lindblom
-	
-	
-	public Movie(String name, double annualIncome) {
+	public Movie(String name) {
 		this.setName(name);
-		this.setAnnualIncome(annualIncome);
+	}
+	
+	
+// Interface methods
+
+	public void addBroadcast(String time, String station) {
 		
 	}
+	
+	public String[] getListOfBroadcasts() {
+		
+		return null;
+	}
 
+
+// Getters and setters
+	
 	public String getDirector() {
 		return director;
 	}
@@ -31,17 +42,7 @@ public class Movie extends Entertainment implements Broadcast {
 		this.director = director;
 	}
 
-	public void addBroadcast(String time, String station) {
-		
-		
-	}
-
 	
-	public String[] getListOfBroadcasts() {
-		
-		return null;
-	}
-
 	
 	
 	

@@ -1,3 +1,4 @@
+
 package Entertainment;
 
 public class Movie extends Entertainment implements Broadcast {
@@ -31,13 +32,13 @@ public class Movie extends Entertainment implements Broadcast {
 	}
 
 	public void addBroadcast(String time, String station) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
-	@Override
+	
 	public String[] getListOfBroadcasts() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

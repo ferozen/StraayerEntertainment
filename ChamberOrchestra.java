@@ -13,24 +13,36 @@ public class ChamberOrchestra extends Entertainment implements Recordable {
 	
 	String[] instrumentList = new String[0];
 	
+	//Creating arraylists for cds and broadcasts
+	public static ArrayList<CDRecording> CDlist = new ArrayList<CDRecording>();
+
+	
 	public ChamberOrchestra(String name, String city, int numberOfSeats) {
 		this.setName(name);
 		this.city=city;
 		this.numberOfSeats = numberOfSeats;
 		this.instrumentList = new String[numberOfSeats];
+		this.setAnnualIncome(30000);
 	}
 
 // Interface methods	
 	
 	public void addCD(String name, String studio, String length) {
-		// TODO Auto-generated method stub
-		
+		// Creating a newCD from CDRecording class
+		CDRecording newCD = new CDRecording(name, studio, length);
+		// Adding CD to the list
+		CDlist.add(newCD);
+		System.out.println("CD added");
 	}
 	
 	public String[] getListofCDs() {
-		// TODO Auto-generated method stub
-		return null;
+		// Converts arraylist to string
+		String[] a = CDlist.toArray(new String[CDlist.size()]);
+		System.out.println("CD list gotten");
+		
+		return a;
 	}
+
 
 // Getters and setters
 	

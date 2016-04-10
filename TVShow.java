@@ -7,26 +7,35 @@ public class TVShow extends Entertainment implements Broadcastable {
 	private String genre;
 	private String station;
 	
+	//Creating arraylists 
+	
+	public static ArrayList<aBroadcast> Broadcastlist = new ArrayList<aBroadcast>();
 	
 
 	public TVShow(String name, String station) {
 		this.setName(name);
-		this.setAnnualIncome(23231);
+		this.setAnnualIncome(100000);
 		this.station = station;
 	}
 
 // Interface methods
 	
+// Broadcast methods work the same as the ones explained above
 	public void addBroadcast(String time, String station) {
-		// TODO Auto-generated method stub
 		
+		aBroadcast newBroadcast = new aBroadcast(time, station);
+		Broadcastlist.add(newBroadcast);
+		System.out.println("Broadcast added!");
 	}
 	
 	public String[] getListOfBroadcasts() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		
+		String[] b = CDlist.toArray(new String[CDlist.size()]);
+		System.out.println("Broadcast list gotten!");
 
+		return b;
+		
+	}
 // Getters and setters
 	
 	public String getGenre() {

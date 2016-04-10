@@ -6,7 +6,7 @@ public class TVShow extends Entertainment implements Broadcastable {
 	
 	private String genre;
 	private String station;
-	
+	private String info;
 	
 
 	public TVShow(String name, String station) {
@@ -22,7 +22,7 @@ public class TVShow extends Entertainment implements Broadcastable {
 		
 	}
 	
-	public String[] getListOfBroadcasts() {
+	public aBroadcast[] getListOfBroadcasts() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -43,7 +43,6 @@ public class TVShow extends Entertainment implements Broadcastable {
 	public void setStation(String station) {
 		this.station = station;
 	}
-	
 	
 
 

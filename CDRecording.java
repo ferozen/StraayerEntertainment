@@ -3,10 +3,10 @@ package Entertainment;
 
 public class CDRecording {
 	
-	String name;
-	String studio;
-	String length;
-	String CDinfo;
+	public String name;
+	public String studio;
+	public String length;
+	public String CDinfo;
 	
 	public CDRecording(String name, String studio, String length) {
 		this.name = name;
@@ -15,6 +15,8 @@ public class CDRecording {
 		this.CDinfo = name + ", " + studio + ", " + length;
 		
 		// Print this stuff
+		System.out.print("Your CD has been created!");
+		System.out.println();
 		System.out.println("The new CD's info has been listed below");
 		System.out.println("CD name: " + name);
 		System.out.println("Recording studio name: " + studio);
@@ -27,7 +29,7 @@ public class CDRecording {
 		
 	}
 	
-	// Ignore below, unused code left for possible use. 
+	// Ignore below, unused code left for possible use in other parts. 
 	
 //	public void createCD(String name,String studio,String length) {
 //		

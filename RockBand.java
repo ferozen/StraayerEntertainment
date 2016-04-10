@@ -33,9 +33,9 @@ public class RockBand extends Entertainment implements Recordable, Broadcastable
 		System.out.println("CD added");
 	}
 	
-	public String[] getListofCDs() {
+	public CDRecording[] getListofCDs() {
 		// Converts arraylist to string
-		String[] a = CDlist.toArray(new String[CDlist.size()]);
+		CDRecording[] a = CDlist.toArray(new CDRecording[CDlist.size()]);
 		System.out.println("CD list gotten");
 		
 		return a;
@@ -49,9 +49,9 @@ public class RockBand extends Entertainment implements Recordable, Broadcastable
 		System.out.println("Broadcast added!");
 	}
 	
-	public String[] getListOfBroadcasts() {
+	public aBroadcast[] getListOfBroadcasts() {
 		
-		String[] b = CDlist.toArray(new String[CDlist.size()]);
+		aBroadcast[] b = Broadcastlist.toArray(new aBroadcast[Broadcastlist.size()]);
 		System.out.println("Broadcast list gotten!");
 
 		return b;
@@ -76,6 +76,12 @@ public class RockBand extends Entertainment implements Recordable, Broadcastable
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+	
 
 
 

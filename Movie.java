@@ -6,9 +6,11 @@ public class Movie extends Entertainment implements Broadcastable {
 	
 	private String director;
 	private String studio;
+	private String info;
 	
 	public Movie(String name) {
 		this.setName(name);
+		this.info = "Name: " + name + "| Director: " + director + "| Studio: " + studio;
 	}
 	
 	
@@ -18,7 +20,7 @@ public class Movie extends Entertainment implements Broadcastable {
 		
 	}
 	
-	public String[] getListOfBroadcasts() {
+	public aBroadcast[] getListOfBroadcasts() {
 		
 		return null;
 	}
@@ -42,6 +44,9 @@ public class Movie extends Entertainment implements Broadcastable {
 		this.director = director;
 	}
 
+	public String toString(){
+		return info;
+	}
 	
 	
 	

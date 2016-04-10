@@ -5,6 +5,7 @@ public class ChamberOrchestra extends Entertainment implements Recordable {
 	
 	private String name;
 	private String city;
+	
 	private int numberOfSeats;
 	public static final String VIOLIN = "Violin";
 	public static final String VIOLA= "Viola";
@@ -19,7 +20,7 @@ public class ChamberOrchestra extends Entertainment implements Recordable {
 		this.numberOfSeats = numberOfSeats;
 		this.instrumentList = new String[numberOfSeats];
 	}
-
+	
 // Interface methods	
 	
 	public void addCD(String name, String studio, String length) {
@@ -27,7 +28,7 @@ public class ChamberOrchestra extends Entertainment implements Recordable {
 		
 	}
 	
-	public String[] getListofCDs() {
+	public CDRecording[] getListofCDs() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -68,8 +69,6 @@ public class ChamberOrchestra extends Entertainment implements Recordable {
 	}
 
 	public void setInstrumentList(String [] a) {
-		
-		
 		instrumentList = a;
 /*		for (int i=0; i<CDlist.size(); i++) {
 			 System.out.println(a[i]);
@@ -77,6 +76,10 @@ public class ChamberOrchestra extends Entertainment implements Recordable {
 		
 	}
 	
+	@Override
+	public String toString() {
+		return super.toString();
+	}
 	
 	
 }

@@ -5,14 +5,14 @@ public class Comedian extends Entertainment implements Recordable, Broadcastable
 	
 	private String city;
 	private boolean raciness=false;
-	
+	private String info;
 	
 	public Comedian(String name, boolean raciness){
 		this.setName(name);
 		this.raciness=raciness;
-		
+		this.info = "Name: " + name + "| City: " + city + "| Raciness: " + raciness;
 	}
-	
+
 	
 // Interface methods
 	
@@ -21,7 +21,7 @@ public class Comedian extends Entertainment implements Recordable, Broadcastable
 		
 	}
 	
-	public String[] getListOfBroadcasts() {
+	public aBroadcast[] getListOfBroadcasts() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -31,7 +31,7 @@ public class Comedian extends Entertainment implements Recordable, Broadcastable
 		
 	}
 
-	public String[] getListofCDs() {
+	public CDRecording[] getListofCDs() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -54,5 +54,8 @@ public class Comedian extends Entertainment implements Recordable, Broadcastable
 		this.raciness = raciness;
 	}
 	
+	public String toString() {
+		return info;
+	}
 	
 }

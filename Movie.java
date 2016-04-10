@@ -7,20 +7,32 @@ public class Movie extends Entertainment implements Broadcastable {
 	private String director;
 	private String studio;
 	
+	//Creating arraylists for cds and broadcasts
+	public static ArrayList<aBroadcast> Broadcastlist = new ArrayList<aBroadcast>();
+	
 	public Movie(String name) {
 		this.setName(name);
+		this.setAnnualIncome(200000);
 	}
 	
 	
 // Interface methods
 
+// Broadcast methods work the same as the ones explained above
 	public void addBroadcast(String time, String station) {
 		
+		aBroadcast newBroadcast = new aBroadcast(time, station);
+		Broadcastlist.add(newBroadcast);
+		System.out.println("Broadcast added!");
 	}
 	
 	public String[] getListOfBroadcasts() {
 		
-		return null;
+		String[] b = CDlist.toArray(new String[CDlist.size()]);
+		System.out.println("Broadcast list gotten!");
+
+		return b;
+		
 	}
 
 

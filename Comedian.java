@@ -3,6 +3,10 @@ package Entertainment;
 
 public class Comedian extends Entertainment implements Recordable, Broadcastable {
 	
+	//Creating arraylists for cds and broadcasts
+	public static ArrayList<CDRecording> CDlist = new ArrayList<CDRecording>();
+	public static ArrayList<aBroadcast> Broadcastlist = new ArrayList<aBroadcast>();
+	
 	private String city;
 	private boolean raciness=false;
 	

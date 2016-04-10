@@ -13,6 +13,9 @@ public class EntertainmentTester {
 		System.out.println("Entertainment tester v1.4");
 		System.out.println("Choose the type of entertainment you would like to create: ");
 		System.out.print(" (1) Rockband ");
+		System.out.print(" (2) TVshow ");
+		System.out.print(" (3) Movie ");
+		System.out.print(" (4) Comedian ");		
 		System.out.print(" (5) Chamber Orchestra ");
 		System.out.println();
 		System.out.print("Enter selection: ");
@@ -21,9 +24,18 @@ public class EntertainmentTester {
 		if (selection == 1) {
 			editRockband();
 		}
+		else if(selection == 2){
+			editTVshow();
+		}
+		else if(selection == 3){
+			editMovie();
+		}else if(selection == 4){
+			editComedian();
+		}
 		else if (selection == 5) {
 			editChamberOrchestra();
 		}
+		
 		
 	}
 
@@ -32,15 +44,15 @@ public class EntertainmentTester {
 		Scanner keyboard = new Scanner(System.in);
 		
 		System.out.print("Choose a title of your rockband: ");
-		String name = keyboard.next();
+		String name = keyboard.nextLine();
 		
 		System.out.print("Choose the genre of your rockband: ");
-		String genre = keyboard.next();
+		String genre = keyboard.nextLine();
 		
 		RockBand newband = new RockBand(name,genre);
 		
 		System.out.print("Set the city your band is from: ");
-		String city = keyboard.next();
+		String city = keyboard.nextLine();
 		
 		newband.setCity(city);
 		
@@ -59,7 +71,7 @@ public class EntertainmentTester {
 		System.out.print("City: " + newband.getCity() + "\r");
 		
 		System.out.print("Would you like to create a new CD? [y/n]:  ");
-		String cdchoice = keyboard.next();
+		String cdchoice = keyboard.nextLine();
 		
 		if ( cdchoice.equals("y")) {
 		System.out.println();
@@ -67,15 +79,15 @@ public class EntertainmentTester {
 		// Need to figure out how to input the whole string if possible. Currently, if you put in a name like "Jagged Edge", the code only reads the "Jagged"
 		// part and just puts edge as the studio which messes up everything. Not 100% sure how to make sure we can have full names
 		System.out.print("What would you like to name the CD? : "); 
-		String cdname = keyboard.next(); 
+		String cdname = keyboard.nextLine(); 
 		System.out.print("\r");
 /*		
 		System.out.print("At which studio was this recorded? : ");
-		String cdstudio = keyboard.next();
+		String cdstudio = keyboard.nextLine();
 		System.out.print("\r");
 		
 		System.out.print("How long is this CD? :  ");
-		String cdlength = keyboard.next();
+		String cdlength = keyboard.nextLine();
 		
 		System.out.print("\r");
 */
@@ -92,7 +104,7 @@ public class EntertainmentTester {
 		}
 		
 		System.out.print("Would you like to get the current list of Rockband CDs? [y/n]: ");
-		String choice2 = keyboard.next();
+		String choice2 = keyboard.nextLine();
 		
 		
 		if ( choice2.equals("y") ) {
@@ -118,7 +130,7 @@ public class EntertainmentTester {
 		System.out.println("Broadcast created! ");
 		
 		System.out.print("Would you like to get the current list of Broadcasts? [y/n]: ");
-		String choice3 = keyboard.next();
+		String choice3 = keyboard.nextLine();
 		
 		
 		if ( choice3.equals("y") ) {
@@ -135,6 +147,104 @@ public class EntertainmentTester {
 		else {
 		}
 	}
+	private static void editTVshow(){
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Choose a name of your TVshow: ");
+		String name = keyboard.nextLine();
+		
+		System.out.print("Choose a station of your TVshow: ");
+		String station = keyboard.nextLine();
+		
+		TVShow newTVshow=new TVShow(name,station);
+		System.out.print("Set a genre of your TVshow: ");
+		String  genre=keyboard.nextLine();
+		newTVshow.setGenre(genre);
+		System.out.println();
+		System.out.println("Here is what your TVshow looks like: ");
+		
+		System.out.print("Name: " + newTVshow.toString() + "\r");
+		
+		System.out.print("Station: " + newTVshow.getStation()+ "\r");
+	
+		
+		
+		System.out.print("Genre: " + newTVshow.getGenre() + "\r");
+		
+		System.out.print("Annual Income: " + newTVshow.getAnnualIncome()+ "\r");
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	private static void editMovie(){
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Choose a name of your movie: ");
+		String name = keyboard.nextLine();
+		
+		System.out.print("Choose the director of your movie: ");
+		String director = keyboard.nextLine();
+		
+		
+		Movie newmovie =new Movie(name);
+		System.out.print("Choose the studio of your movie: ");
+		String  studio=keyboard.nextLine();
+		newmovie.setDirector(director);
+		newmovie.setStudio(studio);
+		System.out.println();
+		System.out.println("Here is what your movie looks like: ");
+		
+		System.out.print("Name: " + newmovie.toString() + "\r");
+		
+		System.out.print("Director: " + newmovie.getDirector()+ "\r");
+	
+		
+		
+		System.out.print("Studio: " + newmovie.getStudio() + "\r");
+		
+		System.out.print("Annual Income: " + newmovie.getAnnualIncome()+ "\r");
+	
+	}
+	private static void editComedian(){
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Choose a name of your comedian: ");
+		String name = keyboard.nextLine();
+		
+		System.out.print("Choose the city of your comedian: ");
+		String city = keyboard.nextLine();
+		System.out.print("Is he/she raciness?(y/n)  ");
+		String r = keyboard.nextLine();
+		boolean raciness;
+		if(r.equals("y")||r.equals("Y")){
+			raciness=true;
+		}else{
+			raciness=false;
+		}
+		
+		Comedian newcom=new Comedian(name,false);
+		String  studio=keyboard.nextLine();
+		newcom.setCity(city);
+		newcom.setRaciness(raciness);
+		System.out.println();
+		System.out.println("Here is what your movie looks like: ");
+		
+		System.out.print("Name: " + newcom.toString() + "\r");
+		
+		System.out.print("City: " + newcom.getCity()+ "\r");
+	
+		
+		
+		System.out.print("Raciness: " + newcom.isRaciness() + "\r");
+		
+		System.out.print("Annual Income: " + newcom.getAnnualIncome()+ "\r");
+		
+		}
 	
 		
 		

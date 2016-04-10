@@ -13,6 +13,10 @@ public class ChamberOrchestra extends Entertainment implements Recordable {
 	
 	String[] instrumentList = new String[0];
 	
+	//Creating arraylists for cds and broadcasts
+	public static ArrayList<CDRecording> CDlist = new ArrayList<CDRecording>();
+
+	
 	public ChamberOrchestra(String name, String city, int numberOfSeats) {
 		this.setName(name);
 		this.city=city;

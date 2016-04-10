@@ -10,31 +10,46 @@ public class Comedian extends Entertainment implements Recordable, Broadcastable
 	public Comedian(String name, boolean raciness){
 		this.setName(name);
 		this.raciness=raciness;
+		this.setAnnualIncome(40000);
 		
 	}
 	
 	
-// Interface methods
+// Interface methods required for Recordable and Broadcast
 	
-	public void addBroadcast(String time, String station) {
-		// TODO Auto-generated method stub
+	public void addCD(String name, String studio, String length) {
+		// Creating a newCD from CDRecording class
+		CDRecording newCD = new CDRecording(name, studio, length);
+		// Adding CD to the list
+		CDlist.add(newCD);
+		System.out.println("CD added");
+	}
+	
+	public String[] getListofCDs() {
+		// Converts arraylist to string
+		String[] a = CDlist.toArray(new String[CDlist.size()]);
+		System.out.println("CD list gotten");
 		
+		return a;
+	}
+
+	// Broadcast methods work the same as the ones explained above
+	public void addBroadcast(String time, String station) {
+		
+		aBroadcast newBroadcast = new aBroadcast(time, station);
+		Broadcastlist.add(newBroadcast);
+		System.out.println("Broadcast added!");
 	}
 	
 	public String[] getListOfBroadcasts() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		
+		String[] b = CDlist.toArray(new String[CDlist.size()]);
+		System.out.println("Broadcast list gotten!");
 
-	public void addCD(String name, String studio, String length) {
-		// TODO Auto-generated method stub
+		return b;
 		
 	}
-
-	public String[] getListofCDs() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 // Getters and setters 
 	
